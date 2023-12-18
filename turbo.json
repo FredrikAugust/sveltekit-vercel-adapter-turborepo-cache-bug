@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": [
+    ".gitignore",
+    ".npmrc",
+    "tsconfig.json",
+    "vite.config.ts",
+    "svelte.config.js"
+  ],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**/*"],
+      "outputs": [".svelte-kit/**", ".vercel/**"]
+    }
+  }
+}
